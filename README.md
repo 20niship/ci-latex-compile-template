@@ -1,0 +1,1 @@
+# ci-latex-compile-template
