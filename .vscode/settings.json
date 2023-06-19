@@ -1,0 +1,37 @@
+{
+    "latex-workshop.latex.recipes": [
+        
+        {
+            "name": "platex + dvipdfmx",
+            "tools": [
+                "platex",
+                "dvipdfmx"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "platex",
+            "command": "platex",
+            "args": [
+                "-output-directory=build",
+                "%DOC%",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+            ],
+            "env": {}
+        },
+        {
+            "name": "dvipdfmx",
+            "command": "dvipdfmx",
+            "args": [
+                "-V 4",
+                "-o",
+                "build/%DOCFILE%.pdf",
+                "build/%DOCFILE%.dvi"
+            ]
+        }
+    ],
+    "latex-workshop.latex.outDir": "./build",
+}
