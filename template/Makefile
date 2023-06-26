@@ -15,7 +15,7 @@ pdf: $(TEX_FILES:%.tex=$(OUTPUT_DIR)/%.pdf)
 
 # 各ファイルの依存関係と変換ルールを指定
 $(OUTPUT_DIR)/%.pdf: %.tex | $(OUTPUT_DIR)
-	$(TEX_COMPILER) -interaction=nonstopmode -output-directory=$(OUTPUT_DIR) $<
+	$(TEX_COMPILER) -interaction=nonstopmode -output-directory=$(OUTPUT_DIR) -file-line-error $< > /dev/null
 
 # 出力ディレクトリが存在しない場合は作成
 $(OUTPUT_DIR):

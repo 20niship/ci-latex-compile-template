@@ -1,5 +1,5 @@
-\documentclass[a4j, twocolumn, 8pt,pdflatex,jadriver=standard]{bxjsarticle}
-\usepackage[dvipdfm]{graphicx}
+\documentclass[a4j, twocolumn, 8pt,pdflatex,ja=standard]{bxjsarticle}
+\usepackage{graphicx}
 \usepackage{amsmath,amssymb,bm}
 \setlength{\headheight}{0mm}
 \setlength{\headsep}{0mm}
@@ -8,9 +8,9 @@
 \setlength{\topmargin}{-14mm}
 \setlength{\oddsidemargin}{-8mm}
 \setlength{\evensidemargin}{-8mm}
-%\setlength{\textheight}{290mm}
-\setlength{\textheight}{274mm}
-\setlength{\textwidth}{176mm}
+% \setlength{\textheight}{290mm}
+% \setlength{\textheight}{274mm}
+% \setlength{\textwidth}{176mm}
 %\renewcommand{\baselinestretch}{0.85}
 %\renewcommand{\refname}{\large 参�??��献}
 
@@ -53,12 +53,13 @@ chukan.bib ファイルを作っておきbibtexを使って引用して日本語
 
 脚注\footnote{脚注はあんまり使ない}はこんな風に使
 ちなみに句読点は「,」と「.」にそろえましょ
+
 \section{目的}
 \vspace{-3mm}
 目的書きます
- \includegraphics[width=7cm,clip]{./figure/map.eps}
 \begin{figure}[htbp]
  \begin{center}
+ \includegraphics[height=4cm]{./figure/map.jpg}
  \caption{MRI画像}
  \label{fig:mri}
  \end{center}
@@ -72,24 +73,24 @@ abc $ \sum_{i=1}^N \sin \frac{\phi}{\pi}$
  \sum_{i=1}^N \sin \frac{\phi}{\pi}
 \end{equation}
 
-\vspace{-6mm}
+sssssssss. lksjdf. 
+
 \section{方法と計画}
-\vspace{-3mm}
-これからの方針を書きます�?
-  \begin{table}[htbp]
-    \begin{center}
-      \caption{表の例}
-      \label{table:table_example}
-      \begin{tabular}{l|cccccc}
-	\hline
-	A & 1 & 2 & 3 & 4 & 5 & 6\\
-	\hline
-	B & a & b & c & d & e & f\\
-	\hline
-      \end{tabular}
-    \end{center}
-  \end{table}
-表はたとえ\tabref{table:table_example}のように
+
+これからの方針を書きます\\表はたとえ\tabref{table:table_example}のように
+\begin{table}[htbp]
+  \centering
+  \caption{表の例}
+  \label{table:table_example}
+  \begin{tabular}{l|cccccc}
+    \hline
+    A & 1 & 2 & 3 & 4 & 5 & 6\\
+    \hline
+    B & a & b & c & d & e & f\\
+    \hline
+  \end{tabular}
+\end{table}
+
 
 \section{現在の進行状況}
 こんなことてきました??
@@ -97,17 +98,19 @@ abc $ \sum_{i=1}^N \sin \frac{\phi}{\pi}$
 これからこんなことをやります
 \small{
 \begin{thebibliography}{9}
-\vspace{-2mm}
+\bibitem{taro} らてふ太郎, 『LaTeX入門』 https://medemanabu.net/latex/
+\bibitem{non} よみ人しらず, 『こんにちは、LaTeX』
 \bibitem{Brooks}
  R.A.Brooks,``A Robust Layered Control System for a Mobile Robot'', IEEE J. Robotics And Automation, RA-2, pp.14-23, 1986.
 \end{thebibliography}
 
-%}
-\small{
-%\bibliographystyle{jplain}
-\bibliographystyle{junsrt}
-\bibliography{chukan}
 }
+
+% \small{
+%\bibliographystyle{jplain}
+% \bibliographystyle{junsrt}
+% \bibliography{chukan}
+% }
 
 \end{document}
 
